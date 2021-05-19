@@ -6,11 +6,12 @@ public class Launcher {
         System.out.println("Bienvenue petit codeur");
         String inputUser = myObj.nextLine();
 
-        if (inputUser.equals("quit")) {
-            System.exit(0);
-        } else {
-            System.out.println("Unknown command");
+        while (!inputUser.equals("quit")) {
+            if (!inputUser.equals("quit")) {
+                System.out.println("Unknown command");
+            }
+            inputUser = myObj.nextLine();
         }
-
+        System.exit(0);
     }
 }
